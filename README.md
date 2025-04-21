@@ -1,3 +1,8 @@
+# Ejercicio seminario react
+El ejercicio me funciona, para poder hacerlo me he basado en los videos que mandaron los compañeros por el chat, asi que copilot sobre todo para resolver el problema de _id.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
