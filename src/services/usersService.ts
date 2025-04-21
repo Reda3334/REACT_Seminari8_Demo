@@ -39,6 +39,26 @@ export const LogIn = async (email: string, password: string): Promise<User> => {
         throw error;
     }
 };
+//Funcion para hacer update de user
+export const updateUser = async (updatedUser: User): Promise<User> => {
+    if (!updatedUser._id) {
+        throw new Error('User ID is required to update the user.');
+    }
+
+    try {
+        const response = await axios.put<User>(
+            `http://localhost:9000/api/Users/${updatedUser._id}`,
+            updatedUser
+        );
+        if (response.status !== 200) {
+            throw new Error('Failed to update user');
+        }
+        return response.data;
+    } catch (error) {
+        console.error('Error updating user:', error);
+        throw error;
+    }
+};
 
 /* 
 //PODEM FERHO COM UNA PROMESA
